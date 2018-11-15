@@ -3,7 +3,14 @@ import {
   MatButtonModule,
   MatIconModule,
   MatFormFieldModule,
-  MatInputModule, MatDatepickerModule, MatNativeDateModule, MAT_DATE_LOCALE, MatCheckboxModule, MatSidenavModule, MatToolbarModule,
+  MatInputModule,
+  MatDatepickerModule,
+  MatNativeDateModule,
+  MAT_DATE_LOCALE,
+  MatCheckboxModule,
+  MatSidenavModule,
+  MatToolbarModule,
+  MatListModule,
 } from '@angular/material';
 
 @NgModule({
@@ -16,7 +23,9 @@ import {
     MatNativeDateModule,
     MatCheckboxModule,
     MatSidenavModule,
-    MatToolbarModule],
+    MatToolbarModule,
+    MatListModule
+  ],
   providers: [{provide: MAT_DATE_LOCALE, useValue: 'en-GB'}],
   exports:  [
     MatButtonModule,
@@ -27,7 +36,9 @@ import {
     MatNativeDateModule,
     MatCheckboxModule,
     MatSidenavModule,
-    MatToolbarModule]
+    MatToolbarModule,
+    MatListModule
+  ]
 })
 export class MaterialModule {
 }
