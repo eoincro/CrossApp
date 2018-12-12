@@ -3,9 +3,9 @@
     <mat-card-title fxLayoutAlign="center">Today</mat-card-title>
     <mat-card-content fxLayoutAlign="center">
       <mat-form-field>
-        <mat-select placeholder="Favorite food">
-          <mat-option value="crunches">
-            Crunches
+        <mat-select placeholder="Select Excercise">
+          <mat-option *ngFor="let excercise of excercises" [value]="excercise.id">
+            {{excercise.name}}
           </mat-option>
           <mat-option value="Burpees">
             Burpees

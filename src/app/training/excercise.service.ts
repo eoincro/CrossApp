@@ -5,11 +5,15 @@ import {Injectable} from '@angular/core';
   providedIn: 'root',
 })
 export class ExcerciseService {
-  availableExcercises: Excercise[] = [
+  private availableExcercises: Excercise[] = [
     {id: 'shoulder-press', name: 'Shoulder Press'},
     {id: 'deadlift', name: 'Deadlift'},
     {id: 'floor-press', name: 'Floor Press'},
     {id: 'front-squat', name: 'Front Squat'},
     {id: 'back-squat', name: 'Back Squat'}
   ];
+
+  getAvailableExcercises() {
+    return this.availableExcercises.slice();
+  }
 }
