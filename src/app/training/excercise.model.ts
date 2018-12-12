@@ -1,4 +1,4 @@
-export interface Excercise {
+export interface Exercise {
   id: string;
   name: string;
   distance?: number;
@@ -7,4 +7,5 @@ export interface Excercise {
   sets?: number;
   date?: Date;
   state?: 'completed'| 'cancelled' | null;
+  time?: string;
 }
