@@ -5,7 +5,7 @@ export interface Exercise {
   weight?: number;
   reps?: number;
   sets?: number;
-  date?: Date;
+  date?: string;
   state?: 'completed'| 'cancelled' | null;
   time?: string;
 }

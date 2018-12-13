@@ -7,6 +7,8 @@ import {Subject} from 'rxjs';
 })
 export class ExerciseService {
   exerciseChanged = new Subject<Exercise>();
+  private exercises: Exercise[] = [{id: 'shoulder-press', name: 'Shoulder Press', date: '23/12/2018'},
+    {id: 'deadlift', name: 'Deadlift',  date: '23/12/2018'}];
   private availableExercises: Exercise[] = [
     {id: 'shoulder-press', name: 'Shoulder Press'},
     {id: 'deadlift', name: 'Deadlift'},
@@ -29,5 +31,9 @@ export class ExerciseService {
 
   getRunningExercise() {
     return {...this.runningExercise};
+  }
+
+  getCompletedOrCancelledExercises() {
+    return this.exercises.slice();
   }
 }
