@@ -11,6 +11,7 @@ import {ExerciseService} from '../exercise.service';
 export class PastTrainingComponent implements OnInit, AfterViewInit {
   displayedColumns = ['date', 'name'];
   excercises: Exercise[] = [];
+  filterValue: string;
 
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -26,10 +27,12 @@ export class PastTrainingComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     this.dataSource.sort = this.sort;
-    this.dataSource.paginator = this.paginator;
+    this.dataSource.
+      paginator = this.paginator;
   }
 
-  doFilter(filterValue: string) {
-    this.dataSource.filter = filterValue.trim().toLocaleLowerCase();
+  doFilter() {
+    this.filterValue = 'Shoulder Press';
+    this.dataSource.filter = this.filterValue.trim().toLocaleLowerCase();
   }
 }

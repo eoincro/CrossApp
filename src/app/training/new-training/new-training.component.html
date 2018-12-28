@@ -8,14 +8,36 @@
             <mat-option *ngFor="let excercise of excercises" [value]="excercise.id">
               {{excercise.name}}
             </mat-option>
-            <mat-option value="Burpees">
-              Burpees
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-select placeholder="Select Weight" ngModel name="exercise" required>
+            <mat-option *ngFor="let excercise of excercises" [value]="excercise.id">
+              {{excercise.weight}}
             </mat-option>
           </mat-select>
         </mat-form-field>
+
+        <mat-form-field>
+          <mat-select placeholder="Select Reps" ngModel name="exercise" required>
+            <mat-option *ngFor="let excercise of excercises" [value]="excercise.id">
+              {{excercise.reps}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-select placeholder="Select Sets" ngModel name="exercise" required>
+            <mat-option *ngFor="let excercise of excercises" [value]="excercise.id">
+              {{excercise.sets}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
       </mat-card-content>
       <mat-card-actions fxLayoutAlign="center">
-        <button type="Submit" mat-button [disabled]="f.invalid">Start</button>
+        <button type="Submit" mat-button [disabled]="f.invalid">Submit</button>
       </mat-card-actions>
     </mat-card>
    </form>
