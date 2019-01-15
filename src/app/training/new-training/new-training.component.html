@@ -5,7 +5,7 @@
       <mat-card-content fxLayoutAlign="center">
         <mat-form-field>
           <mat-select placeholder="Select Excercise" ngModel name="exercise" required>
-            <mat-option *ngFor="let excercise of excercises" [value]="excercise.id">
+            <mat-option *ngFor="let excercise of excercises | async" [value]="excercise.id">
               {{excercise.name}}
             </mat-option>
           </mat-select>
@@ -13,7 +13,7 @@
 
         <mat-form-field>
           <mat-select placeholder="Select Weight" ngModel name="exercise" required>
-            <mat-option *ngFor="let excercise of excercises" [value]="excercise.id">
+            <mat-option *ngFor="let excercise of excercises | async" [value]="excercise.id">
               {{excercise.weight}}
             </mat-option>
           </mat-select>
@@ -21,7 +21,7 @@
 
         <mat-form-field>
           <mat-select placeholder="Select Reps" ngModel name="exercise" required>
-            <mat-option *ngFor="let excercise of excercises" [value]="excercise.id">
+            <mat-option *ngFor="let excercise of excercises | async" [value]="excercise.id">
               {{excercise.reps}}
             </mat-option>
           </mat-select>
@@ -29,7 +29,7 @@
 
         <mat-form-field>
           <mat-select placeholder="Select Sets" ngModel name="exercise" required>
-            <mat-option *ngFor="let excercise of excercises" [value]="excercise.id">
+            <mat-option *ngFor="let excercise of excercises | async" [value]="excercise.id">
               {{excercise.sets}}
             </mat-option>
           </mat-select>
